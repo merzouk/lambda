@@ -1,0 +1,236 @@
+Java Lambda - Java Functional interface
+
+    « Previous
+    Next »
+
+A functional interface is an interface with one method and used as the type of a lambda expression.
+
+public interface ActionListener extends EventListener {
+    public void actionPerformed(ActionEvent event);
+}
+
+ActionListener has only one method, actionPerformed. It is a functional interface. It doesn't matter what the single method is called, the Java compiler will match it up to your lambda expression as long as it has a compatible method signature.
+
+A lambda expression represents an instance of a functional interface.
+
+The type of a lambda expression is a functional interface type.
+
+(String str) -> str.length() takes a String parameter and returns its length.
+
+Its type can be any functional interface type with an abstract method that takes a String as a parameter and returns an int.
+
+The following is an example of such a functional interface:
+
+@FunctionalInterface
+interface Processor  {
+    int  getStringLength(String str);
+}
+
+We can assign lambda expression to its functional interface instance.
+Processor stringProcessor = (String str) -> str.length();
+
+
+
+
+Example
+
+In the following code we assign a lambda expression to its functional interface. Then we execute the lambda expression by calling the method defined in the functional interface and pass in a parameter.
+
+public class Main {
+  public static void main(String[] argv) {
+    Processor stringProcessor = (String str) -> str.length();
+    String name = "Java Lambda";
+    int length = stringProcessor.getStringLength(name);
+    System.out.println(length);/*  w ww . java 2  s .  c  o  m*/
+
+  }
+}
+
+@FunctionalInterface
+interface Processor {
+  int getStringLength(String str);
+}
+
+The code above generates the following result.
+
+
+
+
+Note
+
+A lambda expression by itself cannot be used as a standalone expression.
+
+The type of a lambda expression is inferred by the compiler.
+Java Functional Interface Definition
+
+A functional interface is an interface that has one abstract method.
+
+We cannot use the following types of methods to declare a functional interface:
+
+    Default methods
+    Static methods
+    Methods inherited from the Object class
+
+A functional interface can redeclare the methods in the Object class. And that method is not counted as abstract method. Therefore we can declare another method used by lambda expression.
+
+Consider the Comparator class in the java.util package, as shown:
+
+package java.util;
+//from   w  ww  .ja v  a 2 s .c  o  m
+@FunctionalInterface
+public interface  Comparator<T> {
+   // An  abstract method  declared in the functional interface 
+   int compare(T  o1,   T  o2);
+
+   // Re-declaration of the equals() method in the Object class 
+   boolean equals(Object  obj);
+
+   ...
+}
+
+The Comparator interface has two abstract methods: compare() and equals().
+
+The equals() method is a redeclaration of the equals() method from the Object class.
+@FunctionalInterface Annotation
+
+@FunctionalInterface annotation is defined in the java.lang package. We can optionally use it to mark a functional interface.
+
+If the annotation @FunctionalInterface is annotated on a non-functional interface or other types such as classes, a compile-time error occurs.
+
+An interface with one abstract method is still a functional interface even we don't annotated it with @FunctionalInterface.
+
+public class Main {
+  public static void main(String[] argv) {
+    Processor stringProcessor = (String str) -> str.length();
+    String name = "Java Lambda";
+    int length = stringProcessor.getStringLength(name);
+    System.out.println(length);/*from w  ww  .ja  va2  s  . c  o  m*/
+
+  }
+}
+
+@FunctionalInterface
+interface Processor {
+  int getStringLength(String str);
+}
+
+The code above generates the following result.
+Generic Functional Interface
+
+We can use type parameters with a functional interface to create generic functional interface.
+
+The following code creates a generic functional parameter function interface with one type parameter T.
+
+@FunctionalInterface
+public interface  Comparator<T> {
+    int compare(T o1, T o2);
+}
+
+The following code defines a non-generic functional interface with an abstract generic method:
+
+@FunctionalInterface
+public interface  Processor {
+   <T> void  process(T[] list);
+}
+
+Java Buildin Functional Interfaces
+
+Java 8 has functional interfaces in the package java.util.function.
+Function
+
+To represent a function that takes an argument of type T and returns a result of type R.
+
+public interface Function<T,R>{
+   ...
+   public R apply(T t);
+   ...
+}
+
+BiFunction
+
+To represent a function that takes two arguments of types T and U, and returns a result of type R.
+
+public interface BiFunction<T,U,R>{
+   ...
+   public R apply(T t, U u);
+   ...
+}         
+
+Predicate
+
+To represent a boolean function that returns true or false for the specified argument.
+
+public Predicate<T> {
+   ...
+   public boolean test(T  t);
+   ...
+}
+
+BiPredicate
+
+To represent a boolean function that returns true or false for the two specified arguments.
+
+public interface BiPredicate<T,U>{
+   ...
+   public boolean test(T t, U u);
+   ...   
+}
+
+Consumer
+
+To represent an operation that takes an argument and returns no result.
+
+public interface Consumer<T>{
+   ...
+   public void accept(T t);
+   ...
+}
+
+BiConsumer
+
+To represent an operation that takes two arguments and returns no result.
+
+public interface BiConsumer<T,U>{
+   ...   
+   public void accept(T t, U  u);
+   ...   
+}
+
+Supplier
+
+To represent a function that returns a value as of type T.
+
+public interface Supplier<T>{
+   ...
+    public T get();
+   ...
+}
+
+UnaryOperator
+
+To represent a function that takes an argument and returns a result of the same type.
+
+public interface UnaryOperator<T>{
+   ...
+   public T  apply(T t);
+   ...
+}
+
+BinaryOperator
+
+To represent a function that takes two arguments and returns a result of the same type.
+
+public interface BinaryOperator<T>{
+   ...
+   public T apply(T t1, T t2);
+   ...
+}           
+
+Note 2
+
+The above generic buildin functional interfaces are all the generic versions of more specialized functional interfaces.
+
+For example, IntConsumer is a specialized version of Consumer<T>. 
+
+
+http://www.java2s.com/Tutorials/Java/Java_Lambda/0070__Java_Functional_Interface.htm
