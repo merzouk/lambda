@@ -33,7 +33,7 @@ import com.org.functionnal.UnaryOperator;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com
  * @date    : 27 août 2016 18:37:28

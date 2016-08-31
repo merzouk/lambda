@@ -40,7 +40,7 @@ import com.org.services.UserService;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.service.impl
  * @date    : 27 août 2016 22:34:14

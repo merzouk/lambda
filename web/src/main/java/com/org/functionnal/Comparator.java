@@ -23,11 +23,11 @@
  *---------------------------------------------------------
  */
 
-package com.org.service.functionnal;
+package com.org.functionnal;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 17:30:29

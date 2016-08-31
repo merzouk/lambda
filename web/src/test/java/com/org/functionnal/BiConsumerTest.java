@@ -46,7 +46,7 @@ import com.org.functionnal.BiConsumer;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com
  * @date    : 27 août 2016 22:42:13

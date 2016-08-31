@@ -37,7 +37,7 @@ import com.org.services.FactureService;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.service.impl
  * @date    : 28 ao�t 2016 11:42:27

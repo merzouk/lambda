@@ -43,7 +43,7 @@ import com.org.exception.DaoException;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.dao.impl
  * @date    : 28 ao�t 2016 11:40:23

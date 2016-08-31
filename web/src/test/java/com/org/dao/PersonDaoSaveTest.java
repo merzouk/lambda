@@ -48,7 +48,7 @@ import com.org.utils.Constantes;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.dao
  * @date    : 28 août 2016 18:11:05

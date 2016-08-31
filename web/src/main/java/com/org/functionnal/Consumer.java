@@ -29,7 +29,7 @@ package com.org.functionnal;
  * Consumer
  * To represent an operation that takes an argument and returns no result.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:24:37

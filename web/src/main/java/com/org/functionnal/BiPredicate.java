@@ -31,7 +31,7 @@ import com.org.exception.FunctionnalException;
  * BiPredicate
  * To represent a boolean function that returns true or false for the two specified arguments of types P and F.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:24:11

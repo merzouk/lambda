@@ -36,7 +36,7 @@ import com.org.services.PersonService;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.functionnal.impl
  * @date    : 28 août 2016 17:52:13

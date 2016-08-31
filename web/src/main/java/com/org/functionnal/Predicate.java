@@ -29,7 +29,7 @@ package com.org.functionnal;
  * Predicate
  * To represent a boolean function that returns true or false for the specified argument.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:23:44

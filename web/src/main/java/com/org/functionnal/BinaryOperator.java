@@ -32,7 +32,7 @@ import com.org.exception.FunctionnalException;
  * 
  * To represent a function that takes two arguments of type T and returns a result of the same type.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:26:17

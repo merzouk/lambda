@@ -29,7 +29,7 @@ package com.org.functionnal;
  * Function
  * To represent a function that takes an argument of type T and returns a result of type R.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:22:43

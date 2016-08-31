@@ -36,7 +36,7 @@ import javax.persistence.Table;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.model
  * @date    : 27 ao�t 2016 18:47:10

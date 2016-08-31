@@ -29,7 +29,7 @@ package com.org.functionnal;
  * UnaryOperator
  * 
  * To represent a function that takes an argument and returns a result of the same type.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:25:58

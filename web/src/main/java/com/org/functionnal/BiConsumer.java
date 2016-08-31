@@ -31,7 +31,7 @@ import com.org.exception.FunctionnalException;
  * BiConsumer
  * To represent an operation that takes two arguments and returns no result.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:25:11

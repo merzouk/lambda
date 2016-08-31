@@ -46,7 +46,7 @@ import com.org.functionnal.Consumer;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 28 août 2016 17:58:20

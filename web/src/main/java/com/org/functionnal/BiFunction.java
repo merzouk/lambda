@@ -31,7 +31,7 @@ import java.util.List;
  * BiFunction
  * To represent a function that takes two arguments of types P and U, and returns a result {@see List} of type F.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:23:17

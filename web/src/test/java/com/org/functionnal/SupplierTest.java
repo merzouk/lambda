@@ -47,7 +47,7 @@ import com.org.functionnal.Supplier;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 28 août 2016 17:27:27

@@ -45,7 +45,7 @@ import com.org.functionnal.BinaryOperator;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com
  * @date    : 27 août 2016 23:07:51

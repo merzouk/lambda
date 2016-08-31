@@ -46,7 +46,7 @@ import com.org.functionnal.BiPredicate;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com
  * @date    : 28 août 2016 11:35:35

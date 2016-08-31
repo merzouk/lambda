@@ -27,7 +27,7 @@ package com.org.exception;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.exception
  * @date    : 28 aout 2016 11:58:11

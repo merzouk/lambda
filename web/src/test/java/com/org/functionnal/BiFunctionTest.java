@@ -49,7 +49,7 @@ import com.org.functionnal.BiFunction;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com
  * @date    : 27 août 2016 18:47:01

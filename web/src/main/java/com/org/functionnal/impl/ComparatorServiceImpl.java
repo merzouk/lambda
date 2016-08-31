@@ -28,11 +28,11 @@ package com.org.functionnal.impl;
 import org.springframework.stereotype.Service;
 
 import com.org.entity.Person;
-import com.org.service.functionnal.Comparator;
+import com.org.functionnal.Comparator;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.service.impl
  * @date    : 27 août 2016 17:37:32

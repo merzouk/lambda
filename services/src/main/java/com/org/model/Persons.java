@@ -32,7 +32,7 @@ import com.org.entity.Users;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : persist
  * @package : com.org.entity
  * @date    : 28 août 2016 18:16:46

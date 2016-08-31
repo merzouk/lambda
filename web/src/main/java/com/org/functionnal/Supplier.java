@@ -31,7 +31,7 @@ import java.util.List;
  * Supplier
  * To represent a function that returns a value as of type T.
  * 
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org
  * @date    : 27 août 2016 18:25:34

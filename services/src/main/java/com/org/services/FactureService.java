@@ -29,7 +29,7 @@ import com.org.entity.Facture;
 
 /**
  * A Renseigner.
- * @author  : admin
+ * @author  : mmenhour
  * @project : web
  * @package : com.org.service
  * @date    : 28 ao�t 2016 11:42:07
