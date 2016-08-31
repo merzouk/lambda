@@ -16,7 +16,7 @@
  * 
  * Fichier 		:	Constanes.java
  * Créé le 		: 	4 sept. 2014 à 12:14:39
- * Auteur		: 	ryan
+ * Auteur		: 	mmenhour
  * 
  * Description 	:
  * 
@@ -29,7 +29,7 @@ package com.org.utils;
  * 
  *  A Renseigner.
  * 
- * @author  : ryan
+ * @author  : mmenhour
  * @project : javaJaxws
  * @package : org.utils
  * @date    : 4 sept. 2014 12:14:39

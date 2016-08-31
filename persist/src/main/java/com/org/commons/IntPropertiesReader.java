@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 
  * A Renseigner.
- * @author  : ryan
+ * @author  : mmenhour
  * @project : persist
  * @package : org.dao.impl
  * @date    : 4 sept. 2014 18:56:19

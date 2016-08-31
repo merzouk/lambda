@@ -106,7 +106,7 @@ public class PersonDaoSaveTest
       String prenom = generateString( 12 );
       person.setPrenom( prenom );
       String login = person.getPrenom().substring( 0, 1 ).toLowerCase() + person.getNom().toLowerCase();
-      person.setEmail( login+"@gmail.com" );
+      person.setEmail( login+"@email.com" );
       
       /**
        * 
