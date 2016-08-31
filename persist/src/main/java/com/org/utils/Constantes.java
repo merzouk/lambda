@@ -30,7 +30,7 @@ package com.org.utils;
  *  A Renseigner.
  * 
  * @author  : mmenhour
- * @project : javaJaxws
+ * @project : persist
  * @package : org.utils
  * @date    : 4 sept. 2014 12:14:39
  */

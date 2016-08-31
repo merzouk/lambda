@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 
  * A Renseigner.
  * @author  : mmenhour
- * @project : spring-jsf-jpa
+ * @project : persist
  * @package : com.excelom.excelomweb.bean
  * @date    : 23 sept. 2012 15:52:15
  */
