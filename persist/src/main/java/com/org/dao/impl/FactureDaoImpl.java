@@ -48,7 +48,7 @@ import com.org.exception.DaoException;
  * @package : com.org.dao.impl
  * @date    : 28 ao�t 2016 11:41:08
  */
-public class FactureDaoImpl implements FactureDao
+public class FactureDaoImpl extends GenericDao implements FactureDao
 {
    private static final Logger logger = LoggerFactory.getLogger( FactureDaoImpl.class );
    
@@ -168,25 +168,5 @@ public class FactureDaoImpl implements FactureDao
       List<Facture> list = em.createQuery( "select f from Facture f" ).getResultList();
       em.close();
       return list;
-   }
-   
-   /**
-    * 
-    * @param persistenceUnitName
-    * @return
-    */
-   private EntityManager getEntityManager( String persistenceUnitName, String dataBaseName )
-   {
-      Map<String, String> properties = new HashMap<String, String>();
-      properties.put( "javax.persistence.jdbc.user", IntPropertiesReader.getValueByKey( IntPropertiesReader.USER ) );
-      properties.put( "javax.persistence.jdbc.password", IntPropertiesReader.getValueByKey( IntPropertiesReader.PASSWORD ) );
-      properties.put( "javax.persistence.jdbc.url", IntPropertiesReader.getValueByKey( IntPropertiesReader.JDBC ) + "/" + dataBaseName );
-      properties.put( "javax.persistence.jdbc.driver", IntPropertiesReader.getValueByKey( IntPropertiesReader.DRIVER ) );
-      properties.put( "hibernate.dialect", IntPropertiesReader.getValueByKey( IntPropertiesReader.DIALECT ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.mode", IntPropertiesReader.getValueByKey( IntPropertiesReader.TRASACTIONAL ) );
-      properties.put( "eclipselink.jdbc.exclusive-connection.is-lazy", IntPropertiesReader.getValueByKey( IntPropertiesReader.ISLAZY ) );
-      EntityManagerFactory emf = Persistence.createEntityManagerFactory( persistenceUnitName, properties );
-      EntityManager em = emf.createEntityManager();
-      return em;
    }
 }
