@@ -113,7 +113,7 @@ public class FactureDaoImpl implements FactureDao
       else
       {
          em.close();
-         throw new DaoException( "Id est non null" );
+         throw new DaoException( "Id not null" );
       }
    }
    
@@ -137,7 +137,7 @@ public class FactureDaoImpl implements FactureDao
       else
       {
          em.close();
-         throw new DaoException( "Id est non null" );
+         throw new DaoException( "Id not null" );
       }
    }
    
