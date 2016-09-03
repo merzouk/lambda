@@ -55,7 +55,7 @@ public class ComparatorServiceImpl implements Comparator<Person> {
 				p2 = (Person) o2;
 			}
 			if (p1 == null || p2 == null) {
-				throw new IllegalArgumentException("One or two objects are null");
+				throw new IllegalArgumentException("One or two objects are null or incorrect");
 			}
 			if (p1.getId() != null && p1.getId().intValue() > 0 && p2.getId() != null && p2.getId().intValue() > 0) {
 				return (p1.getId().compareTo(p2.getId()));
