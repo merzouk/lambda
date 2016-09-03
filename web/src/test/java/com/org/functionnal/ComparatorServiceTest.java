@@ -44,97 +44,100 @@ import com.org.entity.Person;
 
 /**
  * A Renseigner.
- * @author  : mmenhour
+ * 
+ * @author : mmenhour
  * @project : web
  * @package : com
- * @date    : 27 août 2016 18:02:24
+ * @date : 27 août 2016 18:02:24
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring/applicationContext.xml" })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class ComparatorServiceTest
-{
-   
-   @Autowired
-   private Comparator<Person>  comparatorService;
-   
-   private static final Logger logger = LoggerFactory.getLogger( OperationServiceTest.class );
-   
-   @Before
-   public void init()
-   {
-      try
-      {
-         assertNotNull( comparatorService );
-      }
-      catch( Exception e )
-      {
-         logger.error( "Error ", e );
-      }
-   }
-   
-   @After
-   public void destroy()
-   {
-      try
-      {
-         comparatorService = null;
-         assertNull( comparatorService );
-      }
-      catch( Exception e )
-      {
-         logger.error( "Error ", e );
-      }
-   }
-   
-   @org.junit.Test
-   public void test()
-   {
-      try
-      {
-         Person pA = new Person();
-         pA.setId( 1 );
-         pA.setNom( "nom1" );
-         pA.setPrenom( "prenom1" );
-         pA.setEmail( "email1@gmail.com" );
-         //
-         Person pB = new Person();
-         pB.setId( 2 );
-         pB.setNom( "nom2" );
-         pB.setPrenom( "prenom2" );
-         pB.setEmail( "emai2@gmail.com" );
-         //
-         int compare = comparatorService.compare( pA, pB );
-         assertEquals( -1, compare );
-         logger.info( "" + compare );
-         //
-         compare = comparatorService.compare( pB, pA );
-         assertEquals( 1, compare );
-         logger.info( "" + compare );
-         //
-         pB.setId( 1 );
-         //
-         compare = comparatorService.compare( pA, pB );
-         assertEquals( 0, compare );
-         logger.info( "" + compare );
-         //
-         compare = comparatorService.compare( pB, pA );
-         assertEquals( 0, compare );
-         logger.info( "" + compare );
-         //
-         pB.setId( null );
-         //
-         compare = comparatorService.compare( pA, pB );
-         assertEquals( 1, compare );
-         logger.info( "" + compare );
-         //
-         compare = comparatorService.compare( pB, pA );
-         assertEquals( -1, compare );
-         logger.info( "" + compare );
-      }
-      catch( Exception e )
-      {
-         logger.error( "Error ", e );
-      }
-   }
+public class ComparatorServiceTest {
+
+	@Autowired
+	private Comparator<Person> comparatorService;
+
+	private static final Logger logger = LoggerFactory.getLogger(OperationServiceTest.class);
+
+	@Before
+	public void init() {
+		try {
+			assertNotNull(comparatorService);
+		} catch (Exception e) {
+			logger.error("Error ", e);
+		}
+	}
+
+	@After
+	public void destroy() {
+		try {
+			comparatorService = null;
+			assertNull(comparatorService);
+		} catch (Exception e) {
+			logger.error("Error ", e);
+		}
+	}
+
+	@org.junit.Test(expected = IllegalArgumentException.class)
+	public void test_1() {
+		comparatorService.compare(new Person(), null);
+	}
+
+	@org.junit.Test(expected = IllegalArgumentException.class)
+	public void test_2() {
+		comparatorService.compare(null, new Person());
+	}
+
+	@org.junit.Test(expected = IllegalArgumentException.class)
+	public void test_3() {
+		comparatorService.compare(null, null);
+	}
+
+	@org.junit.Test
+	public void test_4() {
+		try {
+			Person pA = new Person();
+			pA.setId(1);
+			pA.setNom("nom1");
+			pA.setPrenom("prenom1");
+			pA.setEmail("email1@gmail.com");
+			//
+			Person pB = new Person();
+			pB.setId(2);
+			pB.setNom("nom2");
+			pB.setPrenom("prenom2");
+			pB.setEmail("emai2@gmail.com");
+			//
+			int compare = comparatorService.compare(pA, pB);
+			assertEquals(-1, compare);
+			logger.info("" + compare);
+			//
+			compare = comparatorService.compare(pB, pA);
+			assertEquals(1, compare);
+			logger.info("" + compare);
+			//
+			pB.setId(1);
+			//
+			compare = comparatorService.compare(pA, pB);
+			assertEquals(0, compare);
+			logger.info("" + compare);
+			//
+			compare = comparatorService.compare(pB, pA);
+			assertEquals(0, compare);
+			logger.info("" + compare);
+			//
+			pB.setId(null);
+			//
+			compare = comparatorService.compare(pA, pB);
+			assertEquals(1, compare);
+			logger.info("" + compare);
+			//
+			compare = comparatorService.compare(pB, pA);
+			assertEquals(-1, compare);
+			logger.info("" + compare);
+		} catch (Exception e) {
+			logger.error("Error ", e);
+		}
+	}
 }
